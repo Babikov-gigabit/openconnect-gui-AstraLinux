@@ -1,4 +1,4 @@
-# OpenConnect GUI — Astra Linux build
+# OpenConnect GUI — Astra Linux build (Debian 12)
 
 *Русская версия: [README.ru.md](README.ru.md)*
 
