@@ -22,8 +22,8 @@
 /* undef on normal builds */
 #undef PROJ_GNUTLS_DEBUG
 
-#define TMP_CERT_PREFIX "tmp-certXXXXXX"
-#define TMP_KEY_PREFIX "tmp-keyXXXXXX"
+#define TMP_CERT_PREFIX "/tmp-certXXXXXX"
+#define TMP_KEY_PREFIX "/tmp-keyXXXXXX"
 
 #define OFF_ICON QPixmap(QString::fromLatin1(":/images/traffic_light_red.png"))
 #define ON_ICON QPixmap(QString::fromLatin1(":/images/traffic_light_green.png"))
@@ -35,6 +35,11 @@
 #ifdef _WIN32
 #define net_errno WSAGetLastError()
 #define ms_sleep Sleep
+
+//openconnect.h allows users to choose between <winsock.h> and <winsock2.h>
+//and that choice needs to be made before including openconnect.h
+#include <winsock2.h>
+
 #else
 #include <errno.h>
 #include <fcntl.h>
@@ -48,6 +53,7 @@
 
 extern "C" {
 #include <gnutls/gnutls.h>
+#include <openconnect.h>
 }
 
 #if !defined(__MACH__) && GNUTLS_VERSION_NUMBER >= 0x030400

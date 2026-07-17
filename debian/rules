@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=cmake
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake
+
+# The bundled qt-solutions (QtSingleApplication) is fetched and built via
+# ExternalProject_Add, and its inter-target dependency on the main
+# executable is declared with a plain "DEPENDS" target property rather
+# than add_dependencies(), which does not reliably order a parallel build:
+# the main executable can start compiling before QtSingleApplication's
+# headers are installed. Force a single-job build to avoid that race.
+override_dh_auto_build:
+	dh_auto_build -- -j1

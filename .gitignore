@@ -14,3 +14,4 @@ build-release*/
 _xxx/
 *.zip
 *.exe
+*.exe.sha512

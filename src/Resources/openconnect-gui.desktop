@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=OpenConnect VPN
+GenericName=VPN Client
+Comment=Graphical client for OpenConnect VPN (Cisco AnyConnect, Juniper, GlobalProtect)
+Exec=openconnect-gui
+Icon=openconnect-gui
+Terminal=false
+Categories=Network;
+StartupNotify=true

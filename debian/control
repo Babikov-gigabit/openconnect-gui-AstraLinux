@@ -1,0 +1,34 @@
+Source: openconnect-gui
+Section: net
+Priority: optional
+Maintainer: Local Package Builder <gxammt@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               pkg-config,
+               qt6-base-dev,
+               qt6-base-dev-tools,
+               qt6-scxml-dev,
+               libgnutls28-dev,
+               libopenconnect-dev,
+               libspdlog-dev,
+               libxml2-dev
+Standards-Version: 4.6.2
+Homepage: https://gui.openconnect-vpn.net/
+Rules-Requires-Root: no
+
+Package: openconnect-gui
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         openconnect
+Description: graphical client for OpenConnect VPN
+ OpenConnect GUI is a simple, minimalistic graphical front-end for the
+ openconnect command line VPN client. It targets non-technical users and
+ aims to require as few security-relevant decisions from them as possible.
+ .
+ It supports Cisco AnyConnect, Juniper Network Connect / Pulse Connect
+ Secure and Palo Alto Networks GlobalProtect VPN gateways.
+ .
+ As with the openconnect command line tool, connecting requires permission
+ to create a tun device and change routing, so this program normally needs
+ to be started with root privileges (e.g. via sudo or pkexec).

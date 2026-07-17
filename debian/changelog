@@ -1,0 +1,5 @@
+openconnect-gui (1.6.2-1) unstable; urgency=medium
+
+  * Initial Debian packaging.
+
+ -- Local Package Builder <gxammt@gmail.com>  Wed, 15 Jul 2026 11:35:59 +0300

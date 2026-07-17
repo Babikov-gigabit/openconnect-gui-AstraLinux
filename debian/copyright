@@ -1,0 +1,30 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: openconnect-gui
+Upstream-Contact: OpenConnect VPN GUI Team
+Source: https://gitlab.com/openconnect/openconnect-gui
+
+Files: *
+Copyright: 2014-2015 Red Hat Inc.
+           2016-2024 Nikos Mavrogiannopoulos
+           2016-2024 Lubomir Carik
+           2020-2024 David Woodhouse
+           2021-2024 Dimitri Papadopoulos Orfanos
+           2023-2024 Marios Paouris
+License: GPL-2
+
+Files: debian/*
+Copyright: 2026 Local Package Builder <gxammt@gmail.com>
+License: GPL-2
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in "/usr/share/common-licenses/GPL-2".
